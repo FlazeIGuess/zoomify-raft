@@ -1,0 +1,83 @@
+{
+  "name": "Zoomify",
+  "author": "Flaze",
+  "description": "Optifine-style zoom for Raft. Hold a key to zoom in, use the scroll wheel to adjust the zoom level, with optional smooth transitions.",
+  "version": "1.0.0",
+  "license": "GNU AGPLv3",
+  "gameVersion": "1.0",
+  "requiredByAllPlayers": false,
+  "isModPermanent": false,
+  "excludedFiles": [],
+  "requiredMods": [],
+  "modSettings": [
+    {
+      "type": "section",
+      "name": "zoomSection",
+      "text": "Zoom"
+    },
+    {
+      "type": "keybind",
+      "name": "zoomKey",
+      "text": "Zoom Key",
+      "mainDefault": "C",
+      "section": "zoomSection",
+      "tooltip": [
+        "Hold this key to zoom in.",
+        "Note: C is also Raft's default Crouch/Dive key.",
+        "Rebind one of them to avoid conflicts."
+      ]
+    },
+    {
+      "type": "slider",
+      "name": "defaultZoomFactor",
+      "text": "Starting Zoom (x)",
+      "default": 5,
+      "range": {
+        "min": 1,
+        "max": 50,
+        "decimals": 0
+      },
+      "section": "zoomSection",
+      "tooltip": "How many times zoomed in when you first press the zoom key. 5 = 5x zoom. You can then scroll while holding the key to adjust further."
+    },
+    {
+      "type": "slider",
+      "name": "scrollStep",
+      "text": "Scroll Step (x)",
+      "default": 1,
+      "range": {
+        "min": 0.5,
+        "max": 5,
+        "decimals": 1
+      },
+      "section": "zoomSection",
+      "tooltip": "How many zoom levels each scroll tick moves. Example: 1 = each tick adds/removes 1x zoom. Above 10x the step is doubled, above 20x it is quintupled automatically."
+    },
+    {
+      "type": "section",
+      "name": "smoothingSection",
+      "text": "Smoothing"
+    },
+    {
+      "type": "checkbox",
+      "name": "enableSmoothing",
+      "text": "Smooth Zoom",
+      "default": true,
+      "section": "smoothingSection",
+      "tooltip": "Smoothly animates into and out of zoom. When disabled, zoom snaps instantly."
+    },
+    {
+      "type": "slider",
+      "name": "smoothingSpeed",
+      "text": "Transition Speed",
+      "default": 10,
+      "range": {
+        "min": 1,
+        "max": 30,
+        "decimals": 0
+      },
+      "section": "smoothingSection",
+      "tooltip": "How fast the zoom animation plays. 1 = very slow glide, 30 = almost instant snap. Only active when Smooth Zoom is enabled."
+    }
+  ]
+}
