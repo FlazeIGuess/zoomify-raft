@@ -1,68 +1,85 @@
-# Zoomify
+# Zoomify Mod for Raft
 
-A smooth, customizable zoom mod for Raft. Hold a key to zoom in, scroll while zooming to adjust the zoom level on the fly, and enjoy a buttery-smooth transition between zoom states - just like OptiFine for Minecraft.
-
----
+A smooth, configurable zoom mod for Raft. Hold a key to zoom in, scroll to adjust the magnification on the fly, and enjoy buttery-smooth transitions - just like OptiFine zoom for Minecraft.
 
 ## Features
 
 - Hold a configurable key to zoom in
-- Scroll while zooming to adjust the zoom level (from 1x up to 50x)
-- Smooth zoom in/out transitions with configurable speed
-- Zoom indicator displayed above the hotbar while zooming
-- Relative zoom: works correctly regardless of your in-game FOV setting
+- Scroll while zooming to adjust the zoom level (1x up to 50x)
+- Smooth zoom transitions with configurable speed
+- Zoom indicator above the hotbar showing the current magnification
+- Relative zoom - works correctly at any in-game FOV setting
 - Mouse sensitivity scales automatically with zoom level
-- Hotbar scroll is blocked while zooming so you don't accidentally switch items
-- Fully configurable via [ExtraSettingsAPI](https://www.raftmodding.com/mods/extrasettingsapi) (optional)
-
----
+- Hotbar scroll blocked while zooming (no accidental item switches)
+- Configurable via in-game settings (requires Extra Settings API)
 
 ## Installation
 
 1. Install [RaftModLoader](https://www.raftmodding.com/loader)
-2. *(Optional but recommended)* Install [ExtraSettingsAPI](https://www.raftmodding.com/mods/extrasettingsapi) for in-game settings
-3. Download `Zoomify.rmod` from the [Releases](https://github.com/FlazeIGuess/zoomify-raft/releases) page
-4. Place `Zoomify.rmod` in your `%appdata%/RaftModLoader/mods/` folder
-5. Launch Raft - Zoomify loads automatically
+2. Download the latest `Zoomify.rmod` file from the [releases page](https://github.com/FlazeIGuess/zoomify-raft/releases)
+3. Place the `.rmod` file in your RaftModLoader mods folder
+4. Launch Raft through RaftModLoader
 
----
+## Configuration (Optional)
 
-## Configuration
+For in-game configuration, install the [Extra Settings API](https://www.raftmodding.com/mods/extrasettingsapi) mod. This allows you to customize:
 
-All settings are available in the in-game mod settings menu (requires ExtraSettingsAPI).
+### Zoom Settings
+- Zoom key (default: C)
+- Starting zoom factor (1x-50x, default: 5x)
+- Scroll step per tick (0.5x-5.0x, default: 1x)
 
-| Setting | Default | Description |
-|---|---|---|
-| **Zoom Key** | `C` | Key to hold for zooming |
-| **Starting Zoom (x)** | `5` | Zoom factor applied when you first press the zoom key |
-| **Scroll Step (x)** | `1` | How much each scroll tick adjusts the zoom factor |
-| **Smooth Zoom** | On | Enables smooth lerp transitions between zoom levels |
-| **Transition Speed** | `10` | Speed of the smooth transition (1 = very slow, 30 = instant) |
+### Smoothing Settings
+- Enable/disable smooth zoom transitions
+- Transition speed (1 = very slow, 30 = nearly instant, default: 10)
 
-The scroll step automatically scales for high zoom levels: above 10x the step is doubled, above 20x it is quintupled, so you can reach high magnifications without excessive scrolling.
+Access settings via: Main Menu > Settings > Mods tab
 
----
+The scroll step automatically scales at high zoom levels: above 10x the step is doubled, above 20x it is quintupled.
+
+The mod works perfectly fine without Extra Settings API using default values.
 
 ## Building from Source
 
-Requirements: Visual Studio or MSBuild, .NET Framework 3.5
+### Prerequisites
 
-```bash
-git clone https://github.com/FlazeIGuess/zoomify-raft.git
-cd zoomify-raft
-.\build.bat
-```
+- Visual Studio 2019 or later
+- .NET Framework 3.5
+- Raft game installed
+- RaftModLoader installed
 
-The build script compiles the project and packages `Zoomify.rmod` automatically.
+### Build Steps
 
----
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/FlazeIGuess/zoomify-raft.git
+   cd zoomify-raft
+   ```
+
+2. Update the reference paths in `Zoomify/Zoomify.csproj` to match your Raft installation directory
+
+3. Build the solution:
+   ```bash
+   .\build.bat
+   ```
+
+   Or open `Zoomify.sln` in Visual Studio and build from there
 
 ## Contributing
 
-Pull requests and bug reports are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) if one exists, or open an issue on GitHub.
-
----
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
 
-See [LICENSE](../LICENSE) or the repository root for license information.
+This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with [RaftModLoader](https://www.raftmodding.com/)
+- Uses [Harmony](https://github.com/pardeike/Harmony) for runtime patching
+- Created by Flaze
+
+## Support
+
+- Report bugs on the [Issues page](https://github.com/FlazeIGuess/zoomify-raft/issues)
+- Join the [Raft Modding Discord](https://www.raftmodding.com/discord)
