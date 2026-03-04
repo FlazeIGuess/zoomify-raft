@@ -1,6 +1,6 @@
 # Zoomify
 
-A smooth, customizable zoom mod for Raft. Hold a key to zoom in, scroll while zooming to adjust the zoom level on the fly, and enjoy a buttery-smooth transition between zoom states — just like OptiFine for Minecraft.
+A smooth, customizable zoom mod for Raft. Hold a key to zoom in, scroll while zooming to adjust the zoom level on the fly, and enjoy a buttery-smooth transition between zoom states - just like OptiFine for Minecraft.
 
 ---
 
@@ -23,7 +23,7 @@ A smooth, customizable zoom mod for Raft. Hold a key to zoom in, scroll while zo
 2. *(Optional but recommended)* Install [ExtraSettingsAPI](https://www.raftmodding.com/mods/extrasettingsapi) for in-game settings
 3. Download `Zoomify.rmod` from the [Releases](https://github.com/FlazeIGuess/zoomify-raft/releases) page
 4. Place `Zoomify.rmod` in your `%appdata%/RaftModLoader/mods/` folder
-5. Launch Raft — Zoomify loads automatically
+5. Launch Raft - Zoomify loads automatically
 
 ---
 
