@@ -8,6 +8,7 @@
   "banner": "banner.png",
   "gameVersion": "1.0",
   "requiredByAllPlayers": false,
+  "updateUrl": "https://www.raftmodding.com/api/v1/mods/zoomify/version.txt",
   "isModPermanent": false,
   "excludedFiles": [],
   "requiredMods": [],
